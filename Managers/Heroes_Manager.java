@@ -24,8 +24,12 @@ public class Heroes_Manager {
             }
         }
 
+        try {
+            heroes_list.add(new Hero(hero_name.trim(), Class.valueOf(hero_class)));
+        }catch(IllegalArgumentException e){
+            System.out.println("A classe \"" + hero_class + "\" não existe.");
+        }
         System.out.println("Herói " + hero_name.trim() + " criado com sucesso.");
-        heroes_list.add(new Hero(hero_name.trim(), Class.valueOf(hero_class)));
     }
 
     public static void deleteHero(){
@@ -46,8 +50,8 @@ public class Heroes_Manager {
             return;
         }
 
-        System.out.println("Herói " + hero_name.trim() + " deletado com sucesso.");
         heroes_list.remove(hero_object);
+        System.out.println("Herói " + hero_name.trim() + " deletado com sucesso.");
     }
 
     public static void showMyHeroes() {
@@ -84,7 +88,7 @@ public class Heroes_Manager {
             return;
         }
 
-        System.out.println("Hero " + old_hero_name.trim() + " successfully renamed to " + new_hero_name.trim());
         hero_obj.setHero_name(new_hero_name);
+        System.out.println("Herói " + old_hero_name.trim() + " renomeado com sucesso para " + new_hero_name.trim());
     }
 }
