@@ -14,7 +14,7 @@ public class Heroes_Manager {
         System.out.println("Nome do herói:");
         String hero_name = System_Manager.getScan().nextLine();
 
-        System.out.println("Classe do herói:");
+        System.out.println("Classe do herói: [ELFO, BARBARO, ALQUIMISTA, MAGO, MONARCA]");
         String hero_class = System_Manager.getScan().nextLine();
 
         for(Hero hero : heroes_list){
