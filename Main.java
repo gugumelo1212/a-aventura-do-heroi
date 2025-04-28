@@ -22,6 +22,9 @@ public class Main {
                 case 3:
                     Heroes_Manager.renameHero();
                     break;
+                case 4:
+                    System_Manager.exitSystem();
+                    break;
                 default:
                     System.out.println("Opção inválida.");
                     break;
