@@ -23,6 +23,9 @@ public class Main {
                     Heroes_Manager.renameHero();
                     break;
                 case 4:
+                    Heroes_Manager.attackWithHero();
+                    break;
+                case 5:
                     System_Manager.exitSystem();
                     break;
                 default:
